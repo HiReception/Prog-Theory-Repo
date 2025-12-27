@@ -3,7 +3,10 @@ using UnityEngine;
 // INHERITANCE
 public class Goalkeeper : Kicker
 {
-    public readonly string PlayerName = "Eugene Theoklitos";
+    public override string SenderName
+    {
+        get { return "Eugene Theoklitos"; }
+    }
 
     // POLYMORPHISM
     protected override void Kick(GameObject ball)

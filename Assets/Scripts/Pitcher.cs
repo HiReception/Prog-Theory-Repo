@@ -3,7 +3,10 @@ using UnityEngine;
 // INHERITANCE
 public class Pitcher : Thrower
 {
-    public readonly string PlayerName = "Randy Young";
+    public override string SenderName
+    {
+        get { return "Randy Young"; }
+    }
 
     // POLYMORPHISM
     protected override void Throw(GameObject ball)

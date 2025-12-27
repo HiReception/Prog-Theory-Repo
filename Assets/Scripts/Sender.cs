@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public abstract class Sender : MonoBehaviour
+public abstract class Sender : ScriptableObject
 {
     // ABSTRACTION
     public abstract void Send(GameObject ball);
 
     // ENCAPSULATION
-    public string SenderName { get; }
+    public virtual string SenderName
+    {
+        get { return ""; }
+    }
 
     protected void UpdateStatus(string status)
     {

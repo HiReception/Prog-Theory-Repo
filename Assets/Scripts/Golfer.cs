@@ -3,7 +3,10 @@ using UnityEngine;
 // INHERITANCE
 public class Golfer : Hitter
 {
-    public readonly string PlayerName = "Adam Appleby";
+    public override string SenderName
+    {
+        get { return "Adam Appleby"; }
+    }
 
     // POLYMORPHISM
     protected override void Hit(GameObject ball)

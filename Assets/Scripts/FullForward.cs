@@ -3,7 +3,10 @@ using UnityEngine;
 // INHERITANCE
 public class FullForward : Kicker
 {
-    public readonly string PlayerName = "Gordon Lockett";
+    public override string SenderName
+    {
+        get { return "Gordon Lockett"; }
+    }
 
     // POLYMORPHISM
     protected override void Kick(GameObject ball)
