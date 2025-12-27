@@ -12,6 +12,8 @@ public class FlyHalf : Kicker
     protected override void Kick(GameObject ball)
     {
         UpdateStatus("Drop kicking ball...");
-        // TODO
+        ball.transform.position = new Vector3(0, 0.35f, 0);
+        ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        ball.GetComponent<Rigidbody>().AddForce(((Vector3.up * 2) + Vector3.forward) * 10, ForceMode.Impulse);
     }
 }

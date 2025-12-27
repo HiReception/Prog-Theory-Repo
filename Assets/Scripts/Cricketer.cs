@@ -12,6 +12,8 @@ public class Cricketer : Hitter
     protected override void Hit(GameObject ball)
     {
         UpdateStatus("Slogging ball...");
-        // TODO
+        ball.transform.position = new Vector3(0, 0.35f, 0);
+        ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        ball.GetComponent<Rigidbody>().AddForce((Vector3.up + (Vector3.forward * 3)) * 5, ForceMode.Impulse);
     }
 }

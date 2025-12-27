@@ -12,7 +12,8 @@ public class FullForward : Kicker
     protected override void Kick(GameObject ball)
     {
         UpdateStatus("Drop punting ball...");
-        // TODO
-
+        ball.transform.position = new Vector3(0, 0.75f, 0);
+        ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        ball.GetComponent<Rigidbody>().AddForce((Vector3.up + Vector3.forward) * 10, ForceMode.Impulse);
     }
 }
